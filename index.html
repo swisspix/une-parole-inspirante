@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#12337F">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Une parole">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Une parole inspirante</title>
+  <meta name="description" content="Chaque jour, j'ai une parole à te transmettre.">
+  <link rel="canonical" href="https://une-parole-inspirante.com/">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="preload" href="fonts/barlow-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <main>
+    <section class="view" id="view-welcome" hidden tabindex="-1">
+      <p class="caption brand">Une parole inspirante</p>
+      <div class="center">
+        <h1 class="headline" id="welcome-headline">Chaque jour, je prends le temps de chercher une parole pour te la transmettre.</h1>
+        <p class="lede">Tu reçois une notification. Tu ouvres. Tu lis. C'est tout.</p>
+      </div>
+      <p class="note" id="welcome-note" hidden></p>
+      <button class="button" id="welcome-continue" type="button">Continuer</button>
+    </section>
+
+    <section class="view" id="view-paywall" hidden tabindex="-1">
+      <button class="back" type="button" data-back aria-label="Retour">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="center">
+        <h1 class="price" id="paywall-price">1 franc<br>par mois.</h1>
+        <p class="promise">Une parole par jour, choisie avec une intention.</p>
+      </div>
+      <button class="button" id="paywall-subscribe" type="button">S'abonner · 1 CHF / mois</button>
+      <p class="fineprint">Version de test : aucun paiement réel.</p>
+    </section>
+
+    <section class="view" id="view-citation" hidden tabindex="-1">
+      <p class="caption" id="citation-date"></p>
+      <div class="center">
+        <p class="waiting" id="citation-empty" hidden>Ta première parole arrive bientôt.</p>
+        <blockquote class="quote" id="citation-body" hidden>
+          <p class="quote-text" id="citation-text"></p>
+          <footer class="reference" id="citation-reference"></footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <article class="view view-about" id="view-about" hidden tabindex="-1">
+      <button class="back" type="button" data-back aria-label="Retour">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <h1 class="headline about-title">À propos</h1>
+      <p class="promise">Chaque jour, je prends le temps de chercher une parole pour te la transmettre.</p>
+      <p class="promise">Je ne suis qu'un passage. Tu ne sauras pas qui je suis, et ça n'a pas d'importance. Seule la parole compte.</p>
+      <p class="promise">Ces paroles sont des versets de la Bible.</p>
+      <p class="promise">Tu reçois une notification. Tu ouvres. Tu lis. C'est tout.</p>
+      <p class="promise">Si je n'ai rien transmis à 10&nbsp;h, un verset s'affiche automatiquement, dans la traduction Louis Segond 1910. Celui-là, ce n'est pas moi qui l'ai choisi. Avant 10&nbsp;h, tu gardes la parole de la veille.</p>
+      <p class="promise">1 franc par mois. Pour l'instant, c'est une version de test&nbsp;: aucun paiement réel.</p>
+    </article>
+  </main>
+
+  <footer class="links" id="links">
+    <a href="#a-propos">À propos</a>
+  </footer>
+
+  <script src="citation.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

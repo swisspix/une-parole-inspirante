@@ -1,0 +1,16 @@
+{
+  "name": "Une parole inspirante",
+  "short_name": "Une parole",
+  "description": "Chaque jour, j'ai une parole à te transmettre.",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#12337F",
+  "theme_color": "#12337F",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

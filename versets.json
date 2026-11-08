@@ -1,0 +1,286 @@
+{
+  "source": "Louis Segond 1910 (domaine public)",
+  "usage": "Verset affiché automatiquement quand rien n'est publié à 10 h. Choix du jour : (jours depuis le 1er janvier 1970 × 7919) modulo le nombre de versets.",
+  "versets": [
+    {
+      "text": "L'Éternel est mon berger : je ne manquerai de rien.",
+      "reference": "Psaume 23:1"
+    },
+    {
+      "text": "Je vous laisse la paix, je vous donne ma paix.",
+      "reference": "Jean 14:27"
+    },
+    {
+      "text": "Ta parole est une lampe à mes pieds, et une lumière sur mon sentier.",
+      "reference": "Psaume 119:105"
+    },
+    {
+      "text": "Venez à moi, vous tous qui êtes fatigués et chargés, et je vous donnerai du repos.",
+      "reference": "Matthieu 11:28"
+    },
+    {
+      "text": "Je puis tout par celui qui me fortifie.",
+      "reference": "Philippiens 4:13"
+    },
+    {
+      "text": "Ne crains rien, car je suis avec toi ; ne promène pas des regards inquiets, car je suis ton Dieu.",
+      "reference": "Ésaïe 41:10"
+    },
+    {
+      "text": "Arrêtez, et sachez que je suis Dieu.",
+      "reference": "Psaume 46:11"
+    },
+    {
+      "text": "Car Dieu a tant aimé le monde qu'il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu'il ait la vie éternelle.",
+      "reference": "Jean 3:16"
+    },
+    {
+      "text": "La charité est patiente, elle est pleine de bonté ; la charité n'est point envieuse ; la charité ne se vante point, elle ne s'enfle point d'orgueil.",
+      "reference": "1 Corinthiens 13:4"
+    },
+    {
+      "text": "Confie-toi en l'Éternel de tout ton cœur, et ne t'appuie pas sur ta sagesse.",
+      "reference": "Proverbes 3:5"
+    },
+    {
+      "text": "L'Éternel est ma lumière et mon salut : de qui aurais-je crainte ? L'Éternel est le soutien de ma vie : de qui aurais-je peur ?",
+      "reference": "Psaume 27:1"
+    },
+    {
+      "text": "Recommande ton sort à l'Éternel, mets en lui ta confiance, et il agira.",
+      "reference": "Psaume 37:5"
+    },
+    {
+      "text": "Heureux ceux qui procurent la paix, car ils seront appelés fils de Dieu !",
+      "reference": "Matthieu 5:9"
+    },
+    {
+      "text": "Heureux ceux qui ont le cœur pur, car ils verront Dieu !",
+      "reference": "Matthieu 5:8"
+    },
+    {
+      "text": "Vous êtes la lumière du monde.",
+      "reference": "Matthieu 5:14"
+    },
+    {
+      "text": "Demandez, et l'on vous donnera ; cherchez, et vous trouverez ; frappez, et l'on vous ouvrira.",
+      "reference": "Matthieu 7:7"
+    },
+    {
+      "text": "Tout ce que vous voulez que les hommes fassent pour vous, faites-le de même pour eux, car c'est la loi et les prophètes.",
+      "reference": "Matthieu 7:12"
+    },
+    {
+      "text": "Je suis le chemin, la vérité, et la vie.",
+      "reference": "Jean 14:6"
+    },
+    {
+      "text": "Il y a un temps pour tout, un temps pour toute chose sous les cieux.",
+      "reference": "Ecclésiaste 3:1"
+    },
+    {
+      "text": "Une réponse douce calme la fureur, mais une parole dure excite la colère.",
+      "reference": "Proverbes 15:1"
+    },
+    {
+      "text": "Ne t'ai-je pas donné cet ordre : Fortifie-toi et prends courage ? Ne t'effraie point et ne t'épouvante point, car l'Éternel, ton Dieu, est avec toi dans tout ce que tu entreprendras.",
+      "reference": "Josué 1:9"
+    },
+    {
+      "text": "Les cieux racontent la gloire de Dieu, et l'étendue manifeste l'œuvre de ses mains.",
+      "reference": "Psaume 19:2"
+    },
+    {
+      "text": "Mais ceux qui se confient en l'Éternel renouvellent leur force. Ils prennent le vol comme les aigles ; ils courent, et ne se lassent point, ils marchent, et ne se fatiguent point.",
+      "reference": "Ésaïe 40:31"
+    },
+    {
+      "text": "Je lève mes yeux vers les montagnes… D'où me viendra le secours ? Le secours me vient de l'Éternel, qui a fait les cieux et la terre.",
+      "reference": "Psaume 121:1-2"
+    },
+    {
+      "text": "C'est ici la journée que l'Éternel a faite : qu'elle soit pour nous un sujet d'allégresse et de joie !",
+      "reference": "Psaume 118:24"
+    },
+    {
+      "text": "Réjouissez-vous toujours dans le Seigneur ; je le répète, réjouissez-vous.",
+      "reference": "Philippiens 4:4"
+    },
+    {
+      "text": "Ne vous inquiétez de rien ; mais en toute chose faites connaître vos besoins à Dieu par des prières et des supplications, avec des actions de grâces.",
+      "reference": "Philippiens 4:6"
+    },
+    {
+      "text": "Que tout ce que vous faites se fasse avec charité !",
+      "reference": "1 Corinthiens 16:14"
+    },
+    {
+      "text": "Maintenant donc ces trois choses demeurent : la foi, l'espérance, la charité ; mais la plus grande de ces choses, c'est la charité.",
+      "reference": "1 Corinthiens 13:13"
+    },
+    {
+      "text": "Je vous donne un commandement nouveau : Aimez-vous les uns les autres ; comme je vous ai aimés, vous aussi, aimez-vous les uns les autres.",
+      "reference": "Jean 13:34"
+    },
+    {
+      "text": "Celui qui n'aime pas n'a pas connu Dieu, car Dieu est amour.",
+      "reference": "1 Jean 4:8"
+    },
+    {
+      "text": "Soyez bons les uns envers les autres, compatissants, vous pardonnant réciproquement, comme Dieu vous a pardonné en Christ.",
+      "reference": "Éphésiens 4:32"
+    },
+    {
+      "text": "L'Éternel est près de tous ceux qui l'invoquent, de tous ceux qui l'invoquent avec sincérité.",
+      "reference": "Psaume 145:18"
+    },
+    {
+      "text": "Mon âme, bénis l'Éternel, et n'oublie aucun de ses bienfaits !",
+      "reference": "Psaume 103:2"
+    },
+    {
+      "text": "Enseigne-nous à bien compter nos jours, afin que nous appliquions notre cœur à la sagesse.",
+      "reference": "Psaume 90:12"
+    },
+    {
+      "text": "Car sa colère dure un instant, mais sa grâce toute la vie ; le soir arrivent les pleurs, et le matin l'allégresse.",
+      "reference": "Psaume 30:6"
+    },
+    {
+      "text": "Les bontés de l'Éternel ne sont pas épuisées, ses compassions ne sont pas à leur terme ; elles se renouvellent chaque matin. Oh ! que ta fidélité est grande !",
+      "reference": "Lamentations 3:22-23"
+    },
+    {
+      "text": "Car je connais les projets que j'ai formés sur vous, dit l'Éternel, projets de paix et non de malheur, afin de vous donner un avenir et de l'espérance.",
+      "reference": "Jérémie 29:11"
+    },
+    {
+      "text": "Ne te laisse pas vaincre par le mal, mais surmonte le mal par le bien.",
+      "reference": "Romains 12:21"
+    },
+    {
+      "text": "Réjouissez-vous avec ceux qui se réjouissent ; pleurez avec ceux qui pleurent.",
+      "reference": "Romains 12:15"
+    },
+    {
+      "text": "Nous savons, du reste, que toutes choses concourent au bien de ceux qui aiment Dieu, de ceux qui sont appelés selon son dessein.",
+      "reference": "Romains 8:28"
+    },
+    {
+      "text": "Mais le fruit de l'Esprit, c'est l'amour, la joie, la paix, la patience, la bonté, la bénignité, la fidélité, la douceur, la tempérance.",
+      "reference": "Galates 5:22-23"
+    },
+    {
+      "text": "Portez les fardeaux les uns des autres, et vous accomplirez ainsi la loi de Christ.",
+      "reference": "Galates 6:2"
+    },
+    {
+      "text": "Ne nous lassons pas de faire le bien ; car nous moissonnerons au temps convenable, si nous ne nous relâchons pas.",
+      "reference": "Galates 6:9"
+    },
+    {
+      "text": "Et que la paix de Christ, à laquelle vous avez été appelés pour former un seul corps, règne dans vos cœurs. Et soyez reconnaissants.",
+      "reference": "Colossiens 3:15"
+    },
+    {
+      "text": "Soyez toujours joyeux. Priez sans cesse. Rendez grâces en toutes choses, car c'est à votre égard la volonté de Dieu en Jésus-Christ.",
+      "reference": "1 Thessaloniciens 5:16-18"
+    },
+    {
+      "text": "Déchargez-vous sur lui de tous vos soucis, car lui-même prend soin de vous.",
+      "reference": "1 Pierre 5:7"
+    },
+    {
+      "text": "Approchez-vous de Dieu, et il s'approchera de vous.",
+      "reference": "Jacques 4:8"
+    },
+    {
+      "text": "Voici, je me tiens à la porte, et je frappe. Si quelqu'un entend ma voix et ouvre la porte, j'entrerai chez lui, je souperai avec lui, et lui avec moi.",
+      "reference": "Apocalypse 3:20"
+    },
+    {
+      "text": "La lumière luit dans les ténèbres, et les ténèbres ne l'ont point reçue.",
+      "reference": "Jean 1:5"
+    },
+    {
+      "text": "Je suis la lumière du monde ; celui qui me suit ne marchera pas dans les ténèbres, mais il aura la lumière de la vie.",
+      "reference": "Jean 8:12"
+    },
+    {
+      "text": "Vous connaîtrez la vérité, et la vérité vous affranchira.",
+      "reference": "Jean 8:32"
+    },
+    {
+      "text": "Il n'y a pas de plus grand amour que de donner sa vie pour ses amis.",
+      "reference": "Jean 15:13"
+    },
+    {
+      "text": "Cherchez premièrement le royaume et la justice de Dieu ; et toutes ces choses vous seront données par-dessus.",
+      "reference": "Matthieu 6:33"
+    },
+    {
+      "text": "Ne vous inquiétez donc pas du lendemain ; car le lendemain aura soin de lui-même. À chaque jour suffit sa peine.",
+      "reference": "Matthieu 6:34"
+    },
+    {
+      "text": "Car là où est ton trésor, là aussi sera ton cœur.",
+      "reference": "Matthieu 6:21"
+    },
+    {
+      "text": "Car rien n'est impossible à Dieu.",
+      "reference": "Luc 1:37"
+    },
+    {
+      "text": "Soyez donc miséricordieux, comme votre Père est miséricordieux.",
+      "reference": "Luc 6:36"
+    },
+    {
+      "text": "Or la foi est une ferme assurance des choses qu'on espère, une démonstration de celles qu'on ne voit pas.",
+      "reference": "Hébreux 11:1"
+    },
+    {
+      "text": "L'Éternel te gardera de tout mal, il gardera ton âme.",
+      "reference": "Psaume 121:7"
+    },
+    {
+      "text": "L'Éternel combattra pour vous ; et vous, gardez le silence.",
+      "reference": "Exode 14:14"
+    },
+    {
+      "text": "Que l'Éternel te bénisse, et qu'il te garde ! Que l'Éternel fasse luire sa face sur toi, et qu'il t'accorde sa grâce ! Que l'Éternel tourne sa face vers toi, et qu'il te donne la paix !",
+      "reference": "Nombres 6:24-26"
+    },
+    {
+      "text": "L'homme ne vivra pas de pain seulement, mais de toute parole qui sort de la bouche de Dieu.",
+      "reference": "Matthieu 4:4"
+    },
+    {
+      "text": "Garde ton cœur plus que toute autre chose, car de lui viennent les sources de la vie.",
+      "reference": "Proverbes 4:23"
+    },
+    {
+      "text": "L'ami aime en tout temps, et dans le malheur il se montre un frère.",
+      "reference": "Proverbes 17:17"
+    },
+    {
+      "text": "Les paroles agréables sont un rayon de miel, douces pour l'âme et salutaires pour le corps.",
+      "reference": "Proverbes 16:24"
+    },
+    {
+      "text": "Dieu est pour nous un refuge et un appui, un secours qui ne manque jamais dans la détresse.",
+      "reference": "Psaume 46:2"
+    },
+    {
+      "text": "Ne crains rien, car je te rachète, je t'appelle par ton nom : tu es à moi !",
+      "reference": "Ésaïe 43:1"
+    },
+    {
+      "text": "On t'a fait connaître, ô homme, ce qui est bien ; et ce que l'Éternel demande de toi, c'est que tu pratiques la justice, que tu aimes la miséricorde, et que tu marches humblement avec ton Dieu.",
+      "reference": "Michée 6:8"
+    },
+    {
+      "text": "Ce que vous voulez que les hommes fassent pour vous, faites-le de même pour eux.",
+      "reference": "Luc 6:31"
+    }
+  ]
+}

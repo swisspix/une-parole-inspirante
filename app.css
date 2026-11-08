@@ -1,0 +1,132 @@
+/* Mêmes valeurs que android/.../ui/Screens.kt et Theme.kt. */
+
+@font-face { font-family: Barlow; src: url(fonts/barlow-500.woff2) format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: Barlow; src: url(fonts/barlow-600.woff2) format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: Barlow; src: url(fonts/barlow-700.woff2) format("woff2"); font-weight: 700; font-display: swap; }
+
+:root {
+  --blue: #12337F;
+  --text: #F2F2F2;
+  --text-dim: rgba(242, 242, 242, .82);
+  --gutter: 32px;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+html {
+  background: var(--blue);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  background: var(--blue);
+  color: var(--text);
+  font: 500 16px/1.2 Barlow, sans-serif;
+  overflow-wrap: break-word;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.view {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--gutter) var(--gutter) 12px;
+  outline: none;
+}
+.view[hidden], .links[hidden], [hidden] { display: none; }
+
+.center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 16px;
+}
+
+.caption { font-size: 18px; color: var(--text-dim); }
+.brand { font-weight: 600; }
+
+.headline { font-size: 48px; font-weight: 700; line-height: 1.05; }
+.lede { margin-top: 24px; font-size: 21px; line-height: 1.35; color: var(--text-dim); }
+.note { margin-bottom: 16px; font-size: 16px; color: var(--text-dim); text-align: center; }
+
+/* « par mois. » (3,75 em de large) reste sur une ligne, comme le veut l'écran Android. */
+.price { font-size: min(76px, calc((100vw - 2 * var(--gutter)) / 3.76)); font-weight: 700; line-height: .95; }
+.promise { margin-top: 28px; font-size: 22px; line-height: 1.35; }
+.fineprint { margin-top: 14px; font-size: 15px; color: var(--text-dim); text-align: center; }
+
+.quote { display: flex; flex-direction: column; }
+.quote-text { font-size: 52px; font-weight: 700; line-height: 1.08; white-space: pre-line; }
+.reference { margin-top: 24px; font-size: 18px; font-weight: 600; }
+.waiting { font-size: 40px; font-weight: 700; line-height: 1.08; }
+
+.about-title { margin-top: 12px; }
+.view-about .promise { margin-top: 24px; }
+.view-about { padding-bottom: var(--gutter); }
+
+.button {
+  flex: none;
+  width: 100%;
+  height: 60px;
+  border: 0;
+  border-radius: 30px;
+  background: var(--text);
+  color: var(--blue);
+  font: 700 21px/1.2 Barlow, sans-serif;
+  cursor: pointer;
+}
+.button:active { opacity: .85; }
+
+.back {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-left: -12px;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+}
+.back:active { background: rgba(242, 242, 242, .14); }
+
+.links {
+  flex: none;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+.links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-inline: 12px;
+  color: var(--text-dim);
+  font-size: 16px;
+  text-underline-offset: 3px;
+}
+
+@media (hover: hover) {
+  .button:hover { opacity: .92; }
+  .back:hover { background: rgba(242, 242, 242, .1); }
+  .links a:hover { color: var(--text); }
+}
+
+:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
+.view:focus-visible { outline: none; }
