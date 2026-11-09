@@ -64,10 +64,7 @@ main {
 .lede { margin-top: 24px; font-size: 21px; line-height: 1.35; color: var(--text-dim); }
 .note { margin-bottom: 16px; font-size: 16px; color: var(--text-dim); text-align: center; }
 
-/* « par mois. » (3,75 em de large) reste sur une ligne, comme le veut l'écran Android. */
-.price { font-size: min(76px, calc((100vw - 2 * var(--gutter)) / 3.76)); font-weight: 700; line-height: .95; }
 .promise { margin-top: 28px; font-size: 22px; line-height: 1.35; }
-.fineprint { margin-top: 14px; font-size: 15px; color: var(--text-dim); text-align: center; }
 
 .quote { display: flex; flex-direction: column; }
 .quote-text { font-size: 52px; font-weight: 700; line-height: 1.08; white-space: pre-line; }
@@ -120,6 +117,36 @@ main {
   color: var(--text-dim);
   font-size: 16px;
   text-underline-offset: 3px;
+}
+
+/* Version desktop : le mobile ci-dessus reste celui de l'app Android. Ici, une grande page typographique
+   alignée à gauche, avec des lignes courtes, au lieu d'un téléphone perdu au milieu de l'écran. */
+@media (min-width: 820px) {
+  :root { --gutter: clamp(56px, 7vw, 120px); }
+
+  main { max-width: 1160px; }
+  .view { padding-top: 48px; padding-bottom: 24px; }
+  .center { padding-block: 32px; }
+
+  .caption { font-size: 20px; }
+  .headline { max-width: 15ch; font-size: 76px; line-height: 1.03; }
+  .lede { max-width: 34ch; margin-top: 32px; font-size: 27px; }
+  .note { max-width: 40ch; margin-bottom: 20px; font-size: 17px; text-align: left; }
+
+  .quote-text { max-width: 20ch; font-size: 88px; line-height: 1.06; }
+  .reference { margin-top: 32px; font-size: 22px; }
+  .waiting { font-size: 60px; }
+
+  .promise { max-width: 44ch; margin-top: 32px; font-size: 24px; }
+  .about-title { font-size: 64px; }
+  .view-about { align-self: flex-start; width: 100%; max-width: 760px; }
+  .view-about .promise { margin-top: 28px; }
+
+  .button { align-self: flex-start; width: auto; min-width: 340px; height: 68px; padding-inline: 40px; border-radius: 34px; font-size: 22px; }
+  .back { width: 56px; height: 56px; }
+
+  .links { justify-content: flex-start; width: 100%; max-width: 1160px; margin-inline: auto; padding: 0 calc(var(--gutter) - 12px) 20px; }
+  .links a { font-size: 17px; }
 }
 
 @media (hover: hover) {

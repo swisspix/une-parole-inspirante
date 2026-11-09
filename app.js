@@ -23,8 +23,8 @@ const store = {
   },
 };
 
-/** Simulé, comme sur Android, tant qu'aucun paiement n'est branché. */
-const isSubscribed = () => store.get('abonnement') === 'actif';
+/** Pas d'abonnement sur le web : passé l'écran de bienvenue, on arrive directement sur la citation. */
+let started = store.get('accueil') === 'vu';
 
 function cachedCitation() {
   try { return JSON.parse(store.get('citation')); } catch { return null; }
@@ -36,16 +36,15 @@ const canNotify = () => 'Notification' in window && 'serviceWorker' in navigator
 
 // --- Navigation -----------------------------------------------------------
 
-const VIEWS = { welcome: 'view-welcome', paywall: 'view-paywall', citation: 'view-citation', about: 'view-about' };
-const FITTED = { welcome: ['welcome-headline', 28], paywall: ['paywall-price', 40], citation: ['citation-text', 24] };
+const VIEWS = { welcome: 'view-welcome', citation: 'view-citation', about: 'view-about' };
+const FITTED = { welcome: ['welcome-headline', 28], citation: ['citation-text', 24] };
 
 let current = null;
 let navigatedInApp = false;
 
 function viewForLocation() {
   if (location.hash === '#a-propos') return 'about';
-  if (isSubscribed()) return 'citation';
-  return location.hash === '#abonnement' ? 'paywall' : 'welcome';
+  return started ? 'citation' : 'welcome';
 }
 
 function render() {
@@ -111,20 +110,16 @@ function prepareWelcome() {
 /** Une demande web n'est pas bloquante comme sur Android : si elle reste sans réponse, on ne doit pas rester coincé ici. */
 function onContinue() {
   if (canNotify() && Notification.permission === 'default') {
-    Notification.requestPermission().then(() => { if (isSubscribed()) enablePush(); }).catch(() => {});
+    Notification.requestPermission().then(enablePush).catch(() => {});
+  } else {
+    enablePush();
   }
-  location.hash = 'abonnement';
-}
-
-// --- Abonnement -----------------------------------------------------------
-
-function onSubscribe() {
-  store.set('abonnement', 'actif');
-  history.replaceState(null, '', location.pathname);
-  navigatedInApp = false;
+  started = true;
+  store.set('accueil', 'vu');
   render();
-  enablePush();
 }
+
+// --- Notifications --------------------------------------------------------
 
 /** Inscrit ce navigateur au même sujet de notifications que les téléphones Android. */
 async function enablePush() {
@@ -166,6 +161,9 @@ function showCitation(citation) {
   fit();
 }
 
+/** Ce qui se voit à l'écran : une correction qui garde son heure de publication doit quand même s'afficher. */
+const visibleContent = (citation) => (citation ? `${citation.text}\n${citation.reference}` : '');
+
 function closeNotifications() {
   if (!('serviceWorker' in navigator)) return;
   navigator.serviceWorker.getRegistration()
@@ -175,8 +173,9 @@ function closeNotifications() {
 }
 
 let refreshCount = 0;
+let shown = null;
 
-/** À chaque retour dans l'app : nouvelle date, nouvelle citation éventuelle. */
+/** À chaque retour dans l'app, et toutes les minutes tant qu'elle reste ouverte : nouvelle citation éventuelle. */
 async function refresh() {
   const count = ++refreshCount;
   $('citation-date').textContent = todayLong();
@@ -188,35 +187,31 @@ async function refresh() {
     citation = cachedCitation();
   }
   if (count !== refreshCount || current !== 'citation') return;
-  showCitation(citation);
+  // Ne pas réafficher ce qui est déjà à l'écran : pas de clignotement pendant la lecture.
+  if (visibleContent(citation) !== shown) {
+    shown = visibleContent(citation);
+    showCitation(citation);
+  }
   closeNotifications();
 }
 
 function enterCitation() {
   const cached = cachedCitation();
-  if (cached) showCitation(cached);
+  if (cached) {
+    shown = visibleContent(cached);
+    showCitation(cached);
+  }
   refresh();
 }
 
-/** Change à minuit et à 10 h : un onglet peut rester ouvert plusieurs jours, contrairement à une app. */
-const moment = () => {
-  const now = new Date();
-  return `${todayLong()}|${dayInZurich(now)}|${hourInZurich(now) >= AUTO_HOUR}`;
-};
-
-let lastMoment = moment();
-
+// Un onglet peut rester ouvert des heures : on revérifie Firestore régulièrement, pas seulement au retour.
 setInterval(() => {
-  const next = moment();
-  if (next === lastMoment) return;
-  lastMoment = next;
   if (current === 'citation' && document.visibilityState === 'visible') refresh();
-}, 30_000);
+}, 60_000);
 
 // --- Démarrage ------------------------------------------------------------
 
 $('welcome-continue').addEventListener('click', onContinue);
-$('paywall-subscribe').addEventListener('click', onSubscribe);
 document.querySelectorAll('[data-back]').forEach((button) => button.addEventListener('click', goBack));
 
 window.addEventListener('hashchange', () => {
@@ -237,4 +232,4 @@ if ('serviceWorker' in navigator) {
 }
 
 render();
-if (isSubscribed()) enablePush();
+if (started) enablePush();
