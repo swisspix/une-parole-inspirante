@@ -119,34 +119,36 @@ main {
   text-underline-offset: 3px;
 }
 
-/* Version desktop : le mobile ci-dessus reste celui de l'app Android. Ici, une grande page typographique
-   alignée à gauche, avec des lignes courtes, au lieu d'un téléphone perdu au milieu de l'écran. */
-@media (min-width: 820px) {
-  :root { --gutter: clamp(56px, 7vw, 120px); }
+/* Version desktop : le mobile ci-dessus reste celui de l'app Android. Ici, la page occupe tout l'écran :
+   marges et textes suivent la largeur de la fenêtre. */
+@media (min-width: 720px) {
+  :root {
+    --gutter: clamp(64px, 8vw, 200px);
+    --gutter-top: clamp(48px, 5vw, 96px);
+  }
 
-  main { max-width: 1160px; }
-  .view { padding-top: 48px; padding-bottom: 24px; }
-  .center { padding-block: 32px; }
+  main { max-width: none; }
+  .view { padding-top: var(--gutter-top); padding-bottom: 24px; }
+  .center { padding-block: 40px; }
 
-  .caption { font-size: 20px; }
-  .headline { max-width: 15ch; font-size: 76px; line-height: 1.03; }
-  .lede { max-width: 34ch; margin-top: 32px; font-size: 27px; }
-  .note { max-width: 40ch; margin-bottom: 20px; font-size: 17px; text-align: left; }
+  .caption { font-size: clamp(20px, 1.5vw, 28px); }
+  .headline { max-width: 66vw; font-size: clamp(56px, 5.4vw, 112px); line-height: 1.03; }
+  .lede { max-width: 48ch; margin-top: 36px; font-size: clamp(24px, 2vw, 36px); }
+  .note { margin-bottom: 20px; font-size: clamp(17px, 1.25vw, 22px); text-align: left; }
 
-  .quote-text { max-width: 20ch; font-size: 88px; line-height: 1.06; }
-  .reference { margin-top: 32px; font-size: 22px; }
-  .waiting { font-size: 60px; }
+  .quote-text { max-width: 76vw; font-size: clamp(64px, 6.6vw, 136px); line-height: 1.06; }
+  .reference { margin-top: 36px; font-size: clamp(22px, 1.7vw, 32px); }
+  .waiting { max-width: 66vw; font-size: clamp(56px, 5.4vw, 112px); }
 
-  .promise { max-width: 44ch; margin-top: 32px; font-size: 24px; }
-  .about-title { font-size: 64px; }
-  .view-about { align-self: flex-start; width: 100%; max-width: 760px; }
-  .view-about .promise { margin-top: 28px; }
+  .promise { max-width: 52ch; margin-top: 32px; font-size: clamp(24px, 1.9vw, 34px); }
+  .about-title { font-size: clamp(64px, 6vw, 120px); }
+  .view-about .promise { margin-top: 32px; }
 
-  .button { align-self: flex-start; width: auto; min-width: 340px; height: 68px; padding-inline: 40px; border-radius: 34px; font-size: 22px; }
+  .button { align-self: flex-start; width: auto; min-width: 360px; height: 72px; padding-inline: 48px; border-radius: 36px; font-size: 23px; }
   .back { width: 56px; height: 56px; }
 
-  .links { justify-content: flex-start; width: 100%; max-width: 1160px; margin-inline: auto; padding: 0 calc(var(--gutter) - 12px) 20px; }
-  .links a { font-size: 17px; }
+  .links { justify-content: flex-start; padding: 0 calc(var(--gutter) - 12px) 24px; }
+  .links a { font-size: clamp(17px, 1.25vw, 22px); }
 }
 
 @media (hover: hover) {
