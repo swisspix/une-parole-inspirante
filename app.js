@@ -57,6 +57,7 @@ function render() {
   scrollTo(0, 0);
   if (next === 'welcome') prepareWelcome();
   if (next === 'citation') enterCitation();
+  if (next === 'about') enterAbout();
   fit();
   if (!first) $(VIEWS[next]).focus({ preventScroll: true });
 }
@@ -208,6 +209,35 @@ function enterCitation() {
 setInterval(() => {
   if (current === 'citation' && document.visibilityState === 'visible') refresh();
 }, 60_000);
+
+// --- À propos -------------------------------------------------------------
+
+const ABOUT_URL = `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/(default)/documents/pages/a-propos`;
+
+function showAbout(text) {
+  if (!text) return;
+  const lines = text.split('\n').map((line) => line.trim()).filter(Boolean);
+  $('about-text').replaceChildren(...lines.map((line) => {
+    const paragraph = document.createElement('p');
+    paragraph.className = 'promise';
+    paragraph.textContent = line;
+    return paragraph;
+  }));
+}
+
+/** Le texte écrit sur la page admin ; tant qu'il n'y en a pas, celui de index.html reste affiché. */
+async function enterAbout() {
+  showAbout(store.get('apropos'));
+  try {
+    const response = await fetch(ABOUT_URL);
+    if (!response.ok) return;
+    const text = (await response.json()).fields.text.stringValue;
+    store.set('apropos', text);
+    if (current === 'about') showAbout(text);
+  } catch {
+    // Hors ligne : le dernier texte connu reste affiché.
+  }
+}
 
 // --- Démarrage ------------------------------------------------------------
 
